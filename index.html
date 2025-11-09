@@ -12,14 +12,20 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-    <a href="#home" class="logo">JAVA FULL STACK DEVELOPER</a>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <a href="#home" class="logo">Java Developer</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="resume.pdf" class="resume-button" target="_blank" rel="noopener" aria-label="View resume (opens in new tab)">
+          <i class="fas fa-file-pdf" aria-hidden="true" style="margin-right:0.5rem"></i>
+          View Resume
+        </a>
+      </li>
+    </ul>
     </nav>
 
     <!-- Hero Section -->
@@ -27,7 +33,7 @@
         <div class="hero-content">
             <h1>Aditi Sharma</h1>
             <p>Building digital experiences that merge creativity with technology</p>
-            <p>Specializing in JAVA development and cloud computing</p>
+            <p>Specializing in Java development and cloud computing</p>
             <a href="#contact" class="cta-button">Let's Connect</a>
         </div>
         <div class="hero-image">
@@ -73,12 +79,12 @@
         <div class="skill-card">
             <i class="fas fa-tools"></i>
             <h3>Build Tools</h3>
-            <p>Maven, Gradle, Git, GitHub, TensorFlow, Firebase, Google AI Studio</p>
+            <p>Maven, Gradle, Git, GitHub, Firebase, Google AI Studio</p>
         </div>
         <div class="skill-card">
             <i class="fas fa-database"></i>
             <h3>Databases</h3>
-            <p>MySQL, PostgreSQL, MongoDB</p>
+            <p>MySQL, MongoDB</p>
         </div>
         <div class="skill-card">
             <i class="fas fa-vial"></i>
@@ -121,6 +127,14 @@
         <i class="fab fa-github"></i> View on GitHub
       </a>
     </div>
+    <div class="project-card">
+      <i class="fas fa-comments project-icon"></i>
+      <h3>Loopies</h3>
+      <p>Building a community chat platform focused on real-time conversations, moderation tools and rich media sharing.</p>
+      <a href="https://github.com/dauntless-coder/loopies.git" class="project-link" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
   </div>
 </section>
 
@@ -131,13 +145,13 @@
     <div class="edu-card">
       <h3>Grade 12 – Science</h3>
       <p><strong>City Montessori School, Lucknow</strong></p>
-      <p>Percentage: <span class="highlight">92.25%</span></p>
+      
       <p>Duration: <span class="highlight">2021 - 2023</span></p>
     </div>
     <div class="edu-card">
       <h3>B.Tech – Computer Science & Engineering</h3>
       <p><strong>IILM University, Noida (Delhi NCR)</strong></p>
-      <p>SGPA: <span class="highlight">9.62</span></p>
+      
      
       <p>Duration: <span class="highlight">2024 - 2028</span></p>
     </div>
@@ -145,7 +159,7 @@
 </section>
 
 <!-- Contact section -->
-<section class="contact-form">
+<section id="contact" class="contact-form">
   <h2>Get in Touch</h2>
   <form action="https://formspree.io/f/xqabdwyz" method="POST">
     <input type="text" name="name" placeholder="Your Name" required />
@@ -180,6 +194,18 @@
     
 
     <!-- link to javascript file -->
+     
+     <!-- Resume embed overlay (opens when Resume nav is clicked) -->
+     <div id="resume-overlay" class="resume-overlay" aria-hidden="true">
+       <div class="resume-panel">
+         <button id="resume-close" class="resume-close" aria-label="Close resume">&times;</button>
+         <div class="resume-container">
+           <iframe id="resume-frame" src="resume.pdf" frameborder="0" title="Resume PDF"></iframe>
+         </div>
+         <p class="resume-note">If the PDF doesn't load, <a id="resume-open-new" href="resume.pdf" target="_blank" rel="noopener">open it in a new tab</a>.</p>
+       </div>
+     </div>
+
      <script src="script.js"></script>
 </body>
 </html>
